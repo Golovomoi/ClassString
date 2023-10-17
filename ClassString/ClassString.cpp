@@ -4,11 +4,11 @@
 
 int main()
 {
-    AwsomeString s;
-    AwsomeString stt("");
-    AwsomeString* st = new AwsomeString();
+    AwsomeString* st = new AwsomeString("qqwwee");
+    AwsomeString sat = "asd";
+    AwsomeString sit = "123";
+    sat = "ggffdd";
+    AwsomeString sot(sat);
+    sit = sot;
     std::cout << "Strings!\n";
-    std::string Asd;
-    Asd = "asd";
-    std::cout << Asd;
 }
