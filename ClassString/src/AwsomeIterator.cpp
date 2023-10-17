@@ -17,3 +17,8 @@ bool AwsomeIterator::operator!=(const AwsomeIterator& other) const
 {
     return ptr != other.ptr;
 }
+
+bool AwsomeIterator::operator==(const AwsomeIterator& other) const
+{
+    return ptr == other.ptr;
+}

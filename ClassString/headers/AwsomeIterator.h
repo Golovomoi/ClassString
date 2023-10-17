@@ -14,7 +14,8 @@ public:
 
     char& operator*();
     AwsomeIterator& operator++();
-    bool operator!=(const AwsomeIterator& other) const;
+    bool operator!=(const AwsomeIterator&) const;
+    bool operator==(const AwsomeIterator&) const;
 };
 
 #endif // AWSOMEITERATOR_H

@@ -36,12 +36,12 @@ size_t AwsomeString::GetLength() const
     return _size;
 }
 
-AwsomeIterator AwsomeString::begin()
+AwsomeIterator AwsomeString::begin() const
 {
     return AwsomeIterator(_data);
 }
 
-AwsomeIterator AwsomeString::end()
+AwsomeIterator AwsomeString::end() const
 {
     if (_size == 0) {
         return nullptr;
@@ -93,11 +93,47 @@ AwsomeString AwsomeString::operator+(const char* str) const
     return result;
 }
 
+bool AwsomeString::operator<(const AwsomeString& str) const
+{
+    auto first = this->begin();
+    auto second = str.begin();
+
+    while (first != this->end()) {
+        if (second == str.end())
+            return false;
+        if (*first == *second) {
+            ++first;
+            ++second;
+            continue;
+        }
+        return *first < *second;
+    }
+    return true;
+}
+
 AwsomeString operator+(const char*str, const AwsomeString& aStr)
 {
     AwsomeString result(str);
     result += aStr._data;
     return result;
+}
+
+std::ostream& operator<<(std::ostream& os, const AwsomeString& str)
+{
+    os << str._data;
+    return os;
+}
+
+std::istream& operator>>(std::istream& is, AwsomeString& str)
+{
+    // ÑÉÑâÑyÑÑÑçÑrÑpÑuÑ} ÑÉÑÑÑÇÑÄÑ{Ñy ÑÑÑpÑ{ÑÄÑz Ñ}ÑpÑ{ÑÉÑyÑ}ÑpÑ|ÑéÑ~ÑÄÑz ÑtÑ|ÑyÑ~Ñ~Ñç.
+    char buffer[1024];
+    is.getline(buffer, sizeof(buffer));
+
+    delete[] str._data;
+    str.CopyData(buffer);
+
+    return is;
 }
 
 AwsomeString::~AwsomeString()
