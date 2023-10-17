@@ -11,5 +11,7 @@ int main()
     AwsomeString sot(sat);
     sit = sot;
     AwsomeString moved = std::move(sit);
+    moved += sat;
+    moved += "333";
     std::cout << "Strings!\n";
 }
