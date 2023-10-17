@@ -13,5 +13,8 @@ int main()
     AwsomeString moved = std::move(sit);
     moved += sat;
     moved += "333";
+    AwsomeString conStr = "123" + AwsomeString("456");
+    AwsomeString conStr1 = AwsomeString("ab") + "bc";
+    AwsomeString conStr2 = conStr + conStr1;
     std::cout << "Strings!\n";
 }

@@ -20,6 +20,10 @@ public:
     AwsomeString& operator=(const char*);
     AwsomeString& operator+=(const AwsomeString& other);
     AwsomeString& operator+=(const char*);
+    AwsomeString operator+(const AwsomeString& other) const;
+    AwsomeString operator+(const char*) const;
+    // „u„ƒ„|„y „y„ƒ„„€„|„„x„€„r„p„„„ „„„„€„„ „€„„u„‚„p„„„€„‚, „„„€ „r„p„w„~„€ „ƒ„€„‡„‚„p„~„y„„„ „u„s„€ „r „„u„‚„u„}„u„~„~„€„z, „‰„„„€„q„ „r „t„p„|„„~„u„z„Š„u„} „}„€„w„~„€ „q„„|„€ „r„„x„r„p„„„ „t„u„ƒ„„„‚„…„{„„„€„‚.
+    friend AwsomeString operator+(const char*, const AwsomeString&);
 
     ~AwsomeString();
 

@@ -79,6 +79,27 @@ AwsomeString& AwsomeString::operator+=(const char* str)
     return *this;
 }
 
+AwsomeString AwsomeString::operator+(const AwsomeString& other) const
+{
+    AwsomeString result(_data);
+    result += other._data;
+    return result;
+}
+
+AwsomeString AwsomeString::operator+(const char* str) const
+{
+    AwsomeString result(_data);
+    result += str;
+    return result;
+}
+
+AwsomeString operator+(const char*str, const AwsomeString& aStr)
+{
+    AwsomeString result(str);
+    result += aStr._data;
+    return result;
+}
+
 AwsomeString::~AwsomeString()
 {
     delete _data;
