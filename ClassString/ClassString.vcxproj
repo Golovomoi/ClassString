@@ -140,6 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ClassString.cpp" />
+    <ClCompile Include="src\AwsomeIterator.cpp" />
+    <ClCompile Include="src\AwsomeString.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\AwsomeIterator.h" />
+    <ClInclude Include="headers\AwsomeString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

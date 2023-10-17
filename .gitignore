@@ -21,3 +21,7 @@ ClassString/Debug/ClassString.tlog/ClassString.lastbuildstate
 ClassString/Debug/ClassString.tlog/link.command.1.tlog
 ClassString/Debug/ClassString.tlog/link.read.1.tlog
 ClassString/Debug/ClassString.tlog/link.write.1.tlog
+ClassString/.vs/ClassString/v16/ipch/AutoPCH/4f675a2b93c7d060/AWSOMESTRING.ipch
+ClassString/.vs/ClassString/v16/ipch/AutoPCH/a9a77531e887363f/AWSOMEITERATOR.ipch
+ClassString/Debug/AwsomeIterator.obj
+ClassString/Debug/AwsomeString.obj
