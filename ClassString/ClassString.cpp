@@ -10,5 +10,6 @@ int main()
     sat = "ggffdd";
     AwsomeString sot(sat);
     sit = sot;
+    AwsomeString moved = std::move(sit);
     std::cout << "Strings!\n";
 }

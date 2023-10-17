@@ -17,6 +17,15 @@ AwsomeString::AwsomeString(const AwsomeString& other)
     CopyData(other._data);
 }
 
+AwsomeString::AwsomeString(AwsomeString&& other) noexcept
+{
+    _data = other._data;
+    _size = other._size;
+
+    other._data = nullptr;
+    other._size = 0;
+}
+
 char* AwsomeString::GetRawData() const
 {
     return _data;
@@ -61,6 +70,7 @@ AwsomeString& AwsomeString::operator=(const char* str)
 AwsomeString::~AwsomeString()
 {
     delete _data;
+    _data = nullptr;
 }
 
 size_t AwsomeString::GetStrLength(const char* str) const

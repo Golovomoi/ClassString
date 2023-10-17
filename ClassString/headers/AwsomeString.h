@@ -8,6 +8,7 @@ public:
     AwsomeString();
     AwsomeString(const char*);
     AwsomeString (const AwsomeString&);
+    AwsomeString(AwsomeString&& other) noexcept;
 
     char* GetRawData() const;
     size_t GetLength() const;
