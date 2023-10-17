@@ -55,14 +55,14 @@ AwsomeString& AwsomeString::operator=(const AwsomeString& other)
     if (this == &other) {
         return *this;
     }
-    delete _data;
+    delete[] _data;
     CopyData(other._data);
     return *this;
 }
 
 AwsomeString& AwsomeString::operator=(const char* str)
 {
-    delete _data;
+    delete[] _data;
     CopyData(str);
     return *this;
 }
@@ -102,7 +102,7 @@ AwsomeString operator+(const char*str, const AwsomeString& aStr)
 
 AwsomeString::~AwsomeString()
 {
-    delete _data;
+    delete[] _data;
     _data = nullptr;
 }
 
@@ -120,7 +120,7 @@ void AwsomeString::AddString(const char* str)
 
     _size = _size + adStrLen;
     newData[_size] = '\0';
-    delete _data;
+    delete[] _data;
     _data = newData;
 }
 
