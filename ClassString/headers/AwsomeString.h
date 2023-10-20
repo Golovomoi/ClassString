@@ -23,6 +23,7 @@ public:
     AwsomeString& operator+=(const char*);
     AwsomeString operator+(const AwsomeString&) const;
     AwsomeString operator+(const char*) const;
+    // „ƒ„‚„p„r„~„y„r„p„u„„ „ƒ„„„‚„€„{„y „q„u„x „y„s„~„€„‚„y„‚„…„‘ „‚„u„s„y„ƒ„„„‚
     bool operator<(const AwsomeString&)const;
     // „u„ƒ„|„y „y„ƒ„„€„|„Ž„x„€„r„p„„„Ž „„„„€„„ „€„„u„‚„p„„„€„‚, „„„€ „r„p„w„~„€ „ƒ„€„‡„‚„p„~„y„„„Ž „u„s„€ „r „„u„‚„u„}„u„~„~„€„z, „‰„„„€„q„ „r „t„p„|„Ž„~„u„z„Š„u„} „}„€„w„~„€ „q„„|„€ „r„„x„r„p„„„Ž „t„u„ƒ„„„‚„…„{„„„€„‚.
     friend AwsomeString operator+(const char*, const AwsomeString&);

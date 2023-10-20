@@ -101,12 +101,16 @@ bool AwsomeString::operator<(const AwsomeString& str) const
     while (first != this->end()) {
         if (second == str.end())
             return false;
-        if (*first == *second) {
+        int firstChar, secondChar;
+        // „ƒ„€„s„|„p„ƒ„~„€ „x„p„t„p„‰„u „~„p„} „~„…„w„~„€ „ƒ„‚„p„r„~„y„r„p„„„Ž „ƒ„„„‚„€„{„y „y„s„~„€„‚„y„‚„…„‘ „‚„u„s„y„ƒ„„„‚
+        firstChar = std::tolower(*first);
+        secondChar = std::tolower(*second);
+        if (firstChar == secondChar) {
             ++first;
             ++second;
             continue;
         }
-        return *first < *second;
+        return firstChar < secondChar;
     }
     return true;
 }
