@@ -1,4 +1,4 @@
-#include "../headers/AwsomeIterator.h"
+﻿#include "../headers/AwsomeIterator.h"
 
 AwsomeIterator::AwsomeIterator(char* p) : ptr(p){}
 

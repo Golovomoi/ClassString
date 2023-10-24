@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #ifndef AWSOMESTRING_H
 #define AWSOMESTRING_H
 #include <iostream>
@@ -23,9 +23,9 @@ public:
     AwsomeString& operator+=(const char*);
     AwsomeString operator+(const AwsomeString&) const;
     AwsomeString operator+(const char*) const;
-    // „ƒ„‚„p„r„~„y„r„p„u„„ „ƒ„„„‚„€„{„y „q„u„x „y„s„~„€„‚„y„‚„…„‘ „‚„u„s„y„ƒ„„„‚
+    // ÑÑ€Ğ°Ğ²Ğ½Ğ¸Ğ²Ğ°ĞµÑ‚ ÑÑ‚Ñ€Ğ¾ĞºĞ¸ Ğ±ĞµĞ· Ğ¸Ğ³Ğ½Ğ¾Ñ€Ğ¸Ñ€ÑƒÑ Ñ€ĞµĞ³Ğ¸ÑÑ‚Ñ€
     bool operator<(const AwsomeString&)const;
-    // „u„ƒ„|„y „y„ƒ„„€„|„„x„€„r„p„„„ „„„„€„„ „€„„u„‚„p„„„€„‚, „„„€ „r„p„w„~„€ „ƒ„€„‡„‚„p„~„y„„„ „u„s„€ „r „„u„‚„u„}„u„~„~„€„z, „‰„„„€„q„ „r „t„p„|„„~„u„z„Š„u„} „}„€„w„~„€ „q„„|„€ „r„„x„r„p„„„ „t„u„ƒ„„„‚„…„{„„„€„‚.
+    // ĞµÑĞ»Ğ¸ Ğ¸ÑĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ñ‚ÑŒ ÑÑ‚Ğ¾Ñ‚ Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€, Ñ‚Ğ¾ Ğ²Ğ°Ğ¶Ğ½Ğ¾ ÑĞ¾Ñ…Ñ€Ğ°Ğ½Ğ¸Ñ‚ÑŒ ĞµĞ³Ğ¾ Ğ² Ğ¿ĞµÑ€ĞµĞ¼ĞµĞ½Ğ½Ğ¾Ğ¹, Ñ‡Ñ‚Ğ¾Ğ±Ñ‹ Ğ² Ğ´Ğ°Ğ»ÑŒĞ½ĞµĞ¹ÑˆĞµĞ¼ Ğ¼Ğ¾Ğ¶Ğ½Ğ¾ Ğ±Ñ‹Ğ»Ğ¾ Ğ²Ñ‹Ğ·Ğ²Ğ°Ñ‚ÑŒ Ğ´ĞµÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€.
     friend AwsomeString operator+(const char*, const AwsomeString&);
     friend std::ostream& operator<<(std::ostream&, const AwsomeString&);
     friend std::istream& operator>>(std::istream&, AwsomeString&);

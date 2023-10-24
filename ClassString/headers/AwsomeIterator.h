@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #ifndef AWSOMEITERATOR_H
 #define AWSOMEITERATOR_H
 
 class AwsomeString;
-// „y„„„u„‚„p„„„€„‚ „}„€„w„~„€ „r„|„€„w„y„„„Ž „r „ƒ„p„} „{„|„p„ƒ„ƒ „ƒ„„„‚„€„{„y, „~„€ „‚„u„Š„y„| „u„s„€ „r„„~„u„ƒ„„„y „€„„„t„u„|„Ž„~„€
-// „ƒ„t„u„|„p„| „y„„„u„‚„p„„„€„‚ „t„|„‘ „…„t„€„q„ƒ„„„r„p
+// Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€ Ð¼Ð¾Ð¶Ð½Ð¾ Ð²Ð»Ð¾Ð¶Ð¸Ñ‚ÑŒ Ð² ÑÐ°Ð¼ ÐºÐ»Ð°ÑÑ ÑÑ‚Ñ€Ð¾ÐºÐ¸, Ð½Ð¾ Ñ€ÐµÑˆÐ¸Ð» ÐµÐ³Ð¾ Ð²Ñ‹Ð½ÐµÑÑ‚Ð¸ Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ð¾
+// ÑÐ´ÐµÐ»Ð°Ð» Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€ Ð´Ð»Ñ ÑƒÐ´Ð¾Ð±ÑÑ‚Ð²Ð°
 class AwsomeIterator
 {
 private:

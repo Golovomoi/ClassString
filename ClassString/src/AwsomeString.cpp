@@ -1,4 +1,4 @@
-#include "../headers/AwsomeString.h"
+ï»¿#include "../headers/AwsomeString.h"
 
 AwsomeString::AwsomeString()
 {
@@ -46,7 +46,7 @@ AwsomeIterator AwsomeString::end() const
     if (_size == 0) {
         return nullptr;
     }
-    // „t„|„‘ „„„€„s„€ „‰„„„€„q„ „y„„„u„‚„p„„„€„‚ „…„{„p„x„„r„p„| „~„p „x„~„p„‰„u„~„y„u „x„p „„€„ƒ„|„u„t„~„y„} „„|„u„}„u„~„„„€„} „r„ƒ„u„s„t„p „y„}„u„u„} „€„t„~„… „‘„‰„u„z„{„… „ƒ „ƒ„y„}„r„€„|„€„} '\0'
+    // Ð´Ð»Ñ Ñ‚Ð¾Ð³Ð¾ Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€ ÑƒÐºÐ°Ð·Ñ‹Ð²Ð°Ð» Ð½Ð° Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð·Ð° Ð¿Ð¾ÑÐ»ÐµÐ´Ð½Ð¸Ð¼ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð¼ Ð²ÑÐµÐ³Ð´Ð° Ð¸Ð¼ÐµÐµÐ¼ Ð¾Ð´Ð½Ñƒ ÑÑ‡ÐµÐ¹ÐºÑƒ Ñ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð¼ '\0'
     return AwsomeIterator(_data + _size + 1);
 }
 
@@ -102,7 +102,7 @@ bool AwsomeString::operator<(const AwsomeString& str) const
         if (second == str.end())
             return false;
         int firstChar, secondChar;
-        // „ƒ„€„s„|„p„ƒ„~„€ „x„p„t„p„‰„u „~„p„} „~„…„w„~„€ „ƒ„‚„p„r„~„y„r„p„„„Ž „ƒ„„„‚„€„{„y „y„s„~„€„‚„y„‚„…„‘ „‚„u„s„y„ƒ„„„‚
+        // ÑÐ¾Ð³Ð»Ð°ÑÐ½Ð¾ Ð·Ð°Ð´Ð°Ñ‡Ðµ Ð½Ð°Ð¼ Ð½ÑƒÐ¶Ð½Ð¾ ÑÑ€Ð°Ð²Ð½Ð¸Ð²Ð°Ñ‚ÑŒ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð¸Ð³Ð½Ð¾Ñ€Ð¸Ñ€ÑƒÑ Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€
         firstChar = std::tolower(*first);
         secondChar = std::tolower(*second);
         if (firstChar == secondChar) {
@@ -130,7 +130,7 @@ std::ostream& operator<<(std::ostream& os, const AwsomeString& str)
 
 std::istream& operator>>(std::istream& is, AwsomeString& str)
 {
-    // „ƒ„‰„y„„„„r„p„u„} „ƒ„„„‚„€„{„y „„„p„{„€„z „}„p„{„ƒ„y„}„p„|„Ž„~„€„z „t„|„y„~„~„.
+    // ÑÑ‡Ð¸Ñ‚Ñ‹Ð²Ð°ÐµÐ¼ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ñ‚Ð°ÐºÐ¾Ð¹ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð¹ Ð´Ð»Ð¸Ð½Ð½Ñ‹.
     char buffer[1024];
     is.getline(buffer, sizeof(buffer));
 
@@ -149,7 +149,7 @@ AwsomeString::~AwsomeString()
 void AwsomeString::AddString(const char* str)
 {
     size_t adStrLen = GetStrLength(str);
-    // „„„…„„ „q„ „}„€„w„~„€ „q„„|„€ „r„€„ƒ„„€„|„Ž„x„€„p„„„Ž„ƒ„‘ „€„„„„y„}„y„x„p„ˆ„y„u„z „y „~„u „r„ƒ„u„s„t„p „r„„t„u„|„‘„„„Ž „~„€„r„…„ „„p„}„‘„„„Ž, „~„€ „r „x„p„t„p„~„y„y „‘„r„~„€ „…„{„p„x„p„~„€ „‰„„„€ „„„„€„s„€ „t„u„|„p„„„Ž „~„u „~„p„t„€.
+    // Ñ‚ÑƒÑ‚ Ð±Ñ‹ Ð¼Ð¾Ð¶Ð½Ð¾ Ð±Ñ‹Ð»Ð¾ Ð²Ð¾ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð°Ñ‚ÑŒÑÑ Ð¾Ð¿Ñ‚Ð¸Ð¼Ð¸Ð·Ð°Ñ†Ð¸ÐµÐ¹ Ð¸ Ð½Ðµ Ð²ÑÐµÐ³Ð´Ð° Ð²Ñ‹Ð´ÐµÐ»ÑÑ‚ÑŒ Ð½Ð¾Ð²ÑƒÑŽ Ð¿Ð°Ð¼ÑÑ‚ÑŒ, Ð½Ð¾ Ð² Ð·Ð°Ð´Ð°Ð½Ð¸Ð¸ ÑÐ²Ð½Ð¾ ÑƒÐºÐ°Ð·Ð°Ð½Ð¾ Ñ‡Ñ‚Ð¾ ÑÑ‚Ð¾Ð³Ð¾ Ð´ÐµÐ»Ð°Ñ‚ÑŒ Ð½Ðµ Ð½Ð°Ð´Ð¾.
     char* newData = new char[_size + adStrLen + 1];
     for (auto i = 0; i < _size; i++){
         newData[i] = _data[i];
@@ -164,7 +164,7 @@ void AwsomeString::AddString(const char* str)
     _data = newData;
 }
 
-//„}„€„w„~„€ „q„„|„€ „q„ „y„ƒ„„€„|„Ž„x„€„r„p„„„Ž strlen, „~„€ „ƒ„t„u„|„p„ „r„ƒ„v „ƒ„r„€„v.
+//Ð¼Ð¾Ð¶Ð½Ð¾ Ð±Ñ‹Ð»Ð¾ Ð±Ñ‹ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ strlen, Ð½Ð¾ ÑÐ´ÐµÐ»Ð°ÑŽ Ð²ÑÑ‘ ÑÐ²Ð¾Ñ‘.
 size_t AwsomeString::GetStrLength(const char* str) const
 {
     size_t length = 0;
@@ -178,9 +178,9 @@ void AwsomeString::CopyData(const char* data)
 {
     size_t i = 0;
     _size = GetStrLength(data);
-    // „ƒ„€„x„t„p„u„} „~„p „€„t„y„~ „„|„u„}„u„~„„ „q„€„|„Ž„Š„u „‰„„„€„q„ „~„p „~„u„s„€ „…„{„p„x„„r„p„| „y„„„u„‚„p„„„€„‚ „y „„„„€„„ „w„u „ƒ„y„}„r„€„| „q„…„t„u„„ '\0'
+    // ÑÐ¾Ð·Ð´Ð°ÐµÐ¼ Ð½Ð° Ð¾Ð´Ð¸Ð½ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð±Ð¾Ð»ÑŒÑˆÐµ Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ð° Ð½ÐµÐ³Ð¾ ÑƒÐºÐ°Ð·Ñ‹Ð²Ð°Ð» Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€ Ð¸ ÑÑ‚Ð¾Ñ‚ Ð¶Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð» Ð±ÑƒÐ´ÐµÑ‚ '\0'
     _data = new char[_size + 1];
-    // „{„€„„y„‚„…„u„} „t„p„~„~„„u „y „~„p „r„ƒ„‘„{„y„z „ƒ„|„…„‰„p„z „„‚„€„r„u„‚„‘„u„}, „‰„„„€ „~„u „r„„|„p„x„y„} „x„p „s„‚„p„~„y„ˆ„ „r„„t„u„|„u„~„~„€„z „„p„}„‘„„„y, „r „„‚„€„„„y„r„~„€„} „ƒ„|„…„‰„p„u „€„q„‚„u„x„p„u„} „„„p„} „s„t„u „„p„}„‘„„„Ž „{„€„~„‰„p„u„„„ƒ„‘.
+    // ÐºÐ¾Ð¿Ð¸Ñ€ÑƒÐµÐ¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸ Ð½Ð° Ð²ÑÑÐºÐ¸Ð¹ ÑÐ»ÑƒÑ‡Ð°Ð¹ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼, Ñ‡Ñ‚Ð¾ Ð½Ðµ Ð²Ñ‹Ð»Ð°Ð·Ð¸Ð¼ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ð²Ñ‹Ð´ÐµÐ»ÐµÐ½Ð½Ð¾Ð¹ Ð¿Ð°Ð¼ÑÑ‚Ð¸, Ð² Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¾Ð¼ ÑÐ»ÑƒÑ‡Ð°Ðµ Ð¾Ð±Ñ€ÐµÐ·Ð°ÐµÐ¼ Ñ‚Ð°Ð¼ Ð³Ð´Ðµ Ð¿Ð°Ð¼ÑÑ‚ÑŒ ÐºÐ¾Ð½Ñ‡Ð°ÐµÑ‚ÑÑ.
     while ((i < _size) && (data[i] != '\0')){
         _data[i++] = data[i];
     }
